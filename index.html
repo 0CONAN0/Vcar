@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Review</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body">
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="theBigNav">
+            <div class="container-fluid" id="theNav">
+                <a class="navbar-brand me-auto" href="#">
+                    <img src="webIdImages/webLogo.png" alt="Website Logo" width="200" height="70">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                    <form class="d-flex" role="search" id="searchForm">
+                        <input class="form-control me-2" type="search" placeholder="Search by brand or model"
+                            aria-label="Search" id="form-control">
+                        <button class="btn btn-outline-success" type="submit" id="search-btn"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="d-flex">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-link1" href="#bodyTypeContainer">Chassis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#brandsContainer">Brand</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="container d-flex justify-content-end align-items-center my-5">
+        <h1 id="title">Welcome to Vcar, your <span>ULTIMATE</span> guide to cars.</h1>
+        <img id="hdBugattiImg" src="webIdImages/bugatto-head-image.jpg" alt="Bugatti Head Image" width="900"
+            height="600" style="background-blend-mode: color;">
+    </div>
+
+    <!-- Body Type Selection Section -->
+    <div class="row" id="bodyTypeContainer">
+        <h2 id="bodyTypeTitle">Body Type:</h2>
+        <div class="text-center" id="typeContainer">
+            <a href="#" class="links body-type-link" data-type="suv">
+                <img class="typeImages" src="categoryIcons/suv.png" alt="SUV Icon">
+                <p class="typeText">SUVs</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="sedan">
+                <img class="typeImages" src="categoryIcons/sedan.png" alt="Sedan Icon">
+                <p class="typeText">Sedans</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="compact">
+                <img class="typeImages" src="categoryIcons/compact.png" alt="Compact Icon">
+                <p class="typeText">Compacts</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="convertible">
+                <img class="typeImages" src="categoryIcons/Convertibles.png" alt="Convertible Icon">
+                <p class="typeText">Convertibles</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="supercar">
+                <img class="typeImages" src="categoryIcons/superCar.png" alt="Supercar Icon">
+                <p class="typeText">Super Cars</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="minivan">
+                <img class="typeImages" src="categoryIcons/minivan.png" alt="Minivan Icon">
+                <p class="typeText">Minivans</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="truck">
+                <img class="typeImages" src="categoryIcons/Trucks.png" alt="Truck Icon">
+                <p class="typeText">Trucks</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="sports car">
+                <img class="typeImages" src="categoryIcons/sportCar.png" alt="Sports Car Icon">
+                <p class="typeText">Sports Cars</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="luxury">
+                <img class="typeImages" src="categoryIcons/Luxury Cars.png" alt="Luxury Cars Icon">
+                <p class="typeText">Luxury Cars</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="hybrid">
+                <img class="typeImages" src="categoryIcons/hypridCar.png" alt="Hybrid Car Icon">
+                <p class="typeText">Hybrid Cars</p>
+            </a>
+            <a href="#" class="links body-type-link" data-type="electric">
+                <img class="typeImages" src="categoryIcons/electric-car.png" alt="Electric Car Icon">
+                <p class="typeText">E-Cars</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Brands Section -->
+    <div class="row" id="brandsContainer">
+        <h2 id="brandTitle">Brands:</h2>
+        <span id="view-more-toggle" class="view-all" onclick="toggleViewMore()">View All</span>
+        <div id="brandItemContainer">
+            <!-- Visible Brand Logos -->
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/bmw-logo.png" alt="BMW Logo" data-brand="bmw">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/mercedes-benz-logo.png" alt="Mercedes-Benz Logo"
+                        data-brand="mercedes-benz">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/porsche-logo.png" alt="Porsche Logo" data-brand="porsche">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/lamborghini-logo.png" alt="Lamborghini Logo"
+                        data-brand="lamborghini">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/ferrari-logo.png" alt="Ferrari Logo" data-brand="ferrari">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/bugatti-logo.png" alt="Bugatti Logo" data-brand="bugatti">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/koenigsegg-logo.png" alt="Koenigsegg Logo"
+                        data-brand="koenigsegg">
+                </a>
+            </div>
+            <div class="brandItem">
+                <a href="#">
+                    <img class="brandLogoImages" src="brandLogos/aston-martin-logo.png" alt="Aston Martin Logo"
+                        data-brand="aston-martin">
+                </a>
+            </div>
+
+            <!-- Hidden Brand Logos -->
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/acura-logo.png" alt="Acura Logo" data-brand="acura">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/Apollo-Automobil-logo-640x550.png" alt="Apollo Automobil Logo"
+                            data-brand="apollo">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/Aspark.png" alt="Aspark Logo"
+                            data-brand="aspark">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/audi-logo.png" alt="Audi Logo" data-brand="audi">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/bentley-logo.png" alt="Bentley Logo"
+                            data-brand="bentley">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/cadillac-logo.png" alt="Cadillac Logo"
+                            data-brand="cadillac">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/chevrolet-logo.png" alt="Chevrolet Logo"
+                            data-brand="chevrolet">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/corvette-logo.png" alt="Corvette Logo"
+                            data-brand="corvette">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/ford-logo.png" alt="Ford Logo" data-brand="ford">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/genesis-logo.png" alt="Genesis Logo"
+                            data-brand="genesis">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/gmc-logo.png" alt="GMC Logo" data-brand="gmc">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/honda-logo.png" alt="Honda Logo" data-brand="honda">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/hyundai-logo.png" alt="Hyundai Logo"
+                            data-brand="hyundai">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/infiniti-logo.png" alt="Infiniti Logo"
+                            data-brand="infiniti">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/jaguar-logo.png" alt="Jaguar Logo"
+                            data-brand="jaguar">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/jeep-logo.png" alt="Jeep Logo"
+                            data-brand="jeep">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/kia-logo.png" alt="Kia Logo" data-brand="kia">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/lexus-logo.png" alt="Lexus Logo"
+                            data-brand="lexus">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/lotus-logo.png" alt="Lotus Logo"
+                            data-brand="lotus">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/maserati-logo.png" alt="Maserati Logo"
+                            data-brand="maserati">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/nissan-logo.png" alt="Nissan Logo"
+                            data-brand="nissan">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/pininfarina-logo.png" alt="Pininfarina Logo"
+                            data-brand="pininfarina">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/pagani-logo.png" alt="Pagani Logo"
+                            data-brand="pagani">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/rimac-logo.png" alt="Rimac Logo"
+                            data-brand="rimac">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/rolls-royce-logo.png" alt="Rolls-Royce Logo"
+                            data-brand="rolls-royce">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/SSC-logo-640x550.jpg" alt="SSC Logo" data-brand="ssc">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/subaru-logo.png" alt="Subaru Logo"
+                            data-brand="subaru">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/volkswagen-logo.png" alt="Volkswagen Logo"
+                            data-brand="volkswagen">
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-logos">
+                <div class="brandItem">
+                    <a href="#">
+                        <img class="brandLogoImages" src="brandLogos/tesla-logo.png" alt="Tesla Logo"
+                            data-brand="tesla">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Display Section -->
+    <div class="container my-5" id="carDisplay">
+        <div class="row" id="carContainer">
+            <!-- Car cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+    <script src="script.js"></script> <!-- Your custom JavaScript -->
+</body>
+
+</html>
