@@ -276,7 +276,7 @@ const cars = [
     },
     {
         id: 31,
-        brand: 'Aston Martin',
+        brand: 'aston-martin',
         category: 'Supercar',
         model: 'DB11',
         year: 2021,
@@ -522,7 +522,7 @@ const cars = [
     },
     {
         id: 58,
-        brand: 'Chevrolet',
+        brand: 'corvette',
         category: 'Sports Car',
         model: 'Corvette',
         year: 2021,
