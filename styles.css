@@ -30,8 +30,7 @@
 #theNav {
     background-color: var(--hdFtBackgroundCLR);
     font-family: var(--primaryFont);
-    font-size: 2.2rem;
-    padding-right: 30px;
+    font-size: 1.8rem;
     height: 100px;
     box-shadow: rgb(111, 111, 111) 5px 0px 15px;
 }
@@ -45,8 +44,8 @@
     color: var(--hoverStatsCLR);
 }
 
-#nav-link1 {
-    padding-right: 1.6rem;
+.navbar-nav{
+    padding: 10px;
 }
 
 #form-control {

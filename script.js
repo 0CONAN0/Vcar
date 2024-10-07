@@ -955,7 +955,7 @@ function filterCars() {
     let filteredCars = cars;
 
     if (searchInput) {
-        filteredCars = filteredCars.filter(car => 
+        filteredCars = filteredCars.filter(car =>
             car.brand.toLowerCase().includes(searchInput) ||
             car.model.toLowerCase().includes(searchInput)
         );
@@ -973,7 +973,7 @@ function filterCars() {
 }
 
 // Event listener for search form
-document.querySelector('form[role="search"]').addEventListener('submit', function(e) {
+document.querySelector('form[role="search"]').addEventListener('submit', function (e) {
     e.preventDefault();
     // Remove active class from body type and brand selection
     document.querySelectorAll('.body-type-link').forEach(link => link.classList.remove('body-type-active'));
@@ -983,7 +983,7 @@ document.querySelector('form[role="search"]').addEventListener('submit', functio
 
 // Event listeners for body type links
 document.querySelectorAll('.body-type-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
         // Toggle active class
         document.querySelectorAll('.body-type-link').forEach(l => l.classList.remove('body-type-active'));
@@ -999,7 +999,7 @@ document.querySelectorAll('.body-type-link').forEach(link => {
 
 // Event listeners for brand logos
 document.querySelectorAll('.brandLogoImages').forEach(img => {
-    img.addEventListener('click', function(e) {
+    img.addEventListener('click', function (e) {
         e.preventDefault();
         // Toggle active class
         document.querySelectorAll('.brandLogoImages').forEach(i => i.classList.remove('brand-active'));
@@ -1017,7 +1017,7 @@ document.querySelectorAll('.brandLogoImages').forEach(img => {
 function toggleViewMore() {
     const hiddenLogos = document.querySelectorAll('.hidden-logos');
     const viewMoreToggle = document.getElementById('view-more-toggle');
-    
+
     hiddenLogos.forEach(logo => {
         if (logo.style.display === 'none' || logo.style.display === '') {
             logo.style.display = 'flex';
@@ -1034,6 +1034,6 @@ function toggleViewMore() {
 }
 
 // Initialize display on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     displayCars(cars);
 });
